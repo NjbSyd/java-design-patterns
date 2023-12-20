@@ -29,6 +29,9 @@ import com.iluwatar.cqrs.constants.AppConstants;
 import com.iluwatar.cqrs.queries.QueryServiceImpl;
 import com.iluwatar.cqrs.util.HibernateUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 /**
  * CQRS : Command Query Responsibility Segregation. A pattern used to separate query services from
@@ -62,7 +65,7 @@ public class App {
     commands.bookAddedToAuthor("Java Puzzlers", 39.99, AppConstants.J_BLOCH);
     commands.bookAddedToAuthor("Java Concurrency in Practice", 29.40, AppConstants.J_BLOCH);
     commands.bookAddedToAuthor("Patterns of Enterprise"
-        + " Application Architecture", 54.01, AppConstants.M_FOWLER);
+            + " Application Architecture", 54.01, AppConstants.M_FOWLER);
     commands.bookAddedToAuthor("Domain Specific Languages", 48.89, AppConstants.M_FOWLER);
     commands.authorNameUpdated(AppConstants.E_EVANS, "Eric J. Evans");
 
@@ -76,6 +79,7 @@ public class App {
     var dddBook = queries.getBook("Domain-Driven Design");
     var blochBooks = queries.getAuthorBooks(AppConstants.J_BLOCH);
 
+    Logger LOGGER = LoggerFactory.getLogger(App.class);
     LOGGER.info("Author username : {}", nullAuthor);
     LOGGER.info("Author evans : {}", evans);
     LOGGER.info("jBloch number of books : {}", blochBooksCount);
@@ -85,5 +89,6 @@ public class App {
 
     HibernateUtil.getSessionFactory().close();
   }
+
 
 }

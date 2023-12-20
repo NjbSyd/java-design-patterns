@@ -57,3 +57,4 @@ build/
 #################### Java Design Patterns #######
 etc/Java Design Patterns.urm.puml
 serialized-entity/output.txt
+cqrs.zip

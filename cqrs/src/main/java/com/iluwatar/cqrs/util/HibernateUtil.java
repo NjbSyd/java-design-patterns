@@ -29,6 +29,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+import static org.hibernate.bytecode.BytecodeLogging.LOGGER;
+
 /**
  * This class simply returns one instance of {@link SessionFactory} initialized when the application
  * is started.
