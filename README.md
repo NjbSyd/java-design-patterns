@@ -1,3 +1,7 @@
+# Explaination Video
+
+## [CQRS Pattern In JAVA](https://youtu.be/48dR3RwpFfM)
+
 # Credits and Changes
 
 🙌 **Credit to the Original Repository**
